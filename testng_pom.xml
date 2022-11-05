@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My Test Suite">
+    <listeners>
+        <listener class-name="core.testng.TestngListener"/>
+    </listeners>
+
+    <test name="Test testng xml" parallel="methods" thread-count="3">
+        <classes>
+            <class name="tests.practice.Pom"/>
+        </classes>
+    </test>
+</suite>

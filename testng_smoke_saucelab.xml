@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Testing" parallel="tests" thread-count="15">
+    <listeners>
+        <listener class-name="core.testng.TestngListener"/>
+    </listeners>
+
+    <test name="Firefox">
+        <parameter name="deviceName" value="Firefox"/>
+        <classes>
+            <class name="tests.UserLogin"/>
+            <class name="tests.ProductPurchase"/>
+            <class name="tests.SortInProductListPage"/>
+        </classes>
+    </test>
+
+    <test name="Chrome">
+        <parameter name="deviceName" value="Chrome"/>
+        <classes>
+            <class name="tests.UserLogin"/>
+            <class name="tests.ProductPurchase"/>
+            <class name="tests.SortInProductListPage"/>
+        </classes>
+    </test>
+
+    <test name="Edge">
+        <parameter name="deviceName" value="Edge"/>
+        <classes>
+            <class name="tests.UserLogin"/>
+            <class name="tests.ProductPurchase"/>
+            <class name="tests.SortInProductListPage"/>
+        </classes>
+    </test>
+</suite>
